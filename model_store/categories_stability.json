@@ -1,0 +1,66 @@
+{
+ "etl": [
+  "TiO2-mp",
+  "TiO2-c",
+  "PEDOT:PSS",
+  "SnO2-np",
+  "NiO-c",
+  "SnO2-c",
+  "PTAA",
+  "PCBM-60",
+  "C60",
+  "ZrO2-mp"
+ ],
+ "htl": [
+  "Spiro-MeOTAD",
+  "PCBM-60",
+  "Carbon",
+  "C60",
+  "PTAA",
+  "P3HT",
+  "CuSCN",
+  "PCBM-70",
+  "Au",
+  "Unknown"
+ ],
+ "contact": [
+  "Au",
+  "Ag",
+  "Carbon",
+  "Al",
+  "Cu",
+  "Unknown"
+ ],
+ "substrate": [
+  "SLG | FTO",
+  "SLG | ITO",
+  "PEN | ITO",
+  "PET | ITO"
+ ],
+ "jvatm": [
+  "Unknown",
+  "Air",
+  "N2",
+  "Ambient",
+  "Ar",
+  "Dry air"
+ ],
+ "additives": [
+  "Cl",
+  "SnF2",
+  "5-AVAI",
+  "HI",
+  "Rb",
+  "PEAI",
+  "Pb(SCN)2",
+  "Acetate"
+ ],
+ "stabatm": [
+  "Air",
+  "N2",
+  "Unknown",
+  "Ambient",
+  "Dry air",
+  "Ar"
+ ]
+}

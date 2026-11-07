@@ -1,0 +1,11 @@
+{
+ "n_stability_rows": 14795,
+ "n_numeric_temperature_values": 0,
+ "temperature_column_values": {
+  "(missing)": 14079,
+  "constant": 430,
+  "uncontrolled": 286
+ },
+ "n_rows_with_any_humidity": 5,
+ "median_test_duration_h": 500.0
+}

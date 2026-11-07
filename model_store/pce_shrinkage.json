@@ -1,0 +1,5 @@
+{
+ "slope_pred_vs_actual_blocked": 0.46758682964960196,
+ "max_pred_testset": 30.410707473754883,
+ "max_actual_testset": 32.3
+}

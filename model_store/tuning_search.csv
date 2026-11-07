@@ -1,0 +1,5 @@
+config,max_depth,learning_rate,n_estimators,valid_R2_blocked,min_child_weight,colsample_bytree
+1,6,0.1,300,0.4503,,
+2,8,0.08,400,0.4537,,
+3,10,0.05,500,0.455,5.0,
+4,8,0.05,600,0.4562,,0.6

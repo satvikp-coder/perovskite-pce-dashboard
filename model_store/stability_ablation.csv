@@ -1,0 +1,7 @@
+Inputs,Split,R2_log,MAE_log
+Test protocol only (atmosphere + light),random,0.1897371201700061,1.1042385764622291
+Test protocol only (atmosphere + light),blocked,0.16090455346998078,1.095333352262418
+Composition + device + process only,random,0.5418606067354825,0.740870117560845
+Composition + device + process only,blocked,0.42355011457160596,0.825372721279526
+Both (full stability model),random,0.7591694184637201,0.5229002494114519
+Both (full stability model),blocked,0.6175652689270736,0.6518339045814618

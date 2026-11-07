@@ -1,0 +1,50 @@
+check,item,value,status,note
+1 leakage,PCE feature list free of Voc/Jsc/FF/PCE columns,87 features,PASS,
+1 leakage,build_features columns == saved feature list,87,PASS,
+1 leakage,random: % test rows whose full feature vector also in train,86.93,INFO,same feature vector = same composition+stack+conditions (different devices); inflates random-split score
+1 leakage,blocked: % test rows whose full feature vector also in train,54.73,INFO,same feature vector = same composition+stack+conditions (different devices); inflates random-split score
+1 leakage,% valid rows with a duplicated feature vector (any),72.71,INFO,
+1 leakage,exact duplicate raw rows (valid rows),75,INFO,
+1 leakage,blocked split groups disjoint (overlap count),0,PASS,
+2 metrics,PCE random 80/20 recomputed R2/MAE vs file,0.6229/2.3461 vs 0.6229/2.3461,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,PCE random 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.6229,PASS,
+2 metrics,Voc random 80/20 recomputed R2/MAE vs file,0.6933/0.0603 vs 0.6933/0.0603,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,Voc random 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.6933,PASS,
+2 metrics,Jsc random 80/20 recomputed R2/MAE vs file,0.6467/2.0756 vs 0.6467/2.0756,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,Jsc random 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.6467,PASS,
+2 metrics,FF random 80/20 recomputed R2/MAE vs file,0.4532/0.0615 vs 0.4532/0.0615,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,FF random 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.4532,PASS,
+2 metrics,PCE from Voc x Jsc x FF random 80/20 recomputed R2/MAE vs file,0.5950/2.4459 vs 0.5950/2.4459,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,PCE blocked 80/20 recomputed R2/MAE vs file,0.4565/2.9300 vs 0.4565/2.9300,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,PCE blocked 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.4565,PASS,
+2 metrics,Voc blocked 80/20 recomputed R2/MAE vs file,0.5131/0.0733 vs 0.5131/0.0733,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,Voc blocked 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.5131,PASS,
+2 metrics,Jsc blocked 80/20 recomputed R2/MAE vs file,0.4712/2.6571 vs 0.4712/2.6571,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,Jsc blocked 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.4712,PASS,
+2 metrics,FF blocked 80/20 recomputed R2/MAE vs file,0.2543/0.0744 vs 0.2543/0.0744,PASS,dR2=0.0000 dMAE=0.0000
+2 metrics,FF blocked 80/20 test_predictions csv reproduces metrics csv (dashboard source),0.2543,PASS,
+2 metrics,PCE from Voc x Jsc x FF blocked 80/20 recomputed R2/MAE vs file,0.4165/3.0336 vs 0.4165/3.0336,PASS,dR2=0.0000 dMAE=0.0000
+3 sanity,MAPbI3 PCE direct/physics/Voc/Jsc/FF,14.24/13.59/1.019/20.00/0.667,INFO,extrap=LOW
+3 sanity,MAPbI3 physics PCE == Voc*Jsc*FF exactly,True,PASS,
+3 sanity,FAPbI3 PCE direct/physics/Voc/Jsc/FF,14.83/13.82/1.002/20.85/0.661,INFO,extrap=LOW
+3 sanity,FAPbI3 physics PCE == Voc*Jsc*FF exactly,True,PASS,
+3 sanity,CsPbBr3 PCE direct/physics/Voc/Jsc/FF,5.82/5.58/1.216/7.33/0.627,INFO,extrap=LOW
+3 sanity,CsPbBr3 physics PCE == Voc*Jsc*FF exactly,True,PASS,
+3 sanity,CsPbI3 PCE direct/physics/Voc/Jsc/FF,7.03/6.64/0.896/12.65/0.585,INFO,extrap=LOW
+3 sanity,CsPbI3 physics PCE == Voc*Jsc*FF exactly,True,PASS,
+3 sanity,MASnI3 PCE direct/physics/Voc/Jsc/FF,3.87/2.68/0.468/12.56/0.455,INFO,extrap=LOW
+3 sanity,MASnI3 physics PCE == Voc*Jsc*FF exactly,True,PASS,
+3 sanity,FASnI3 PCE direct/physics/Voc/Jsc/FF,4.36/3.25/0.402/15.36/0.526,INFO,extrap=LOW
+3 sanity,FASnI3 physics PCE == Voc*Jsc*FF exactly,True,PASS,
+3 sanity,database mean PCE (valid rows) / MAPbI mean,12.41 / 12.03,INFO,
+3 sanity,MAPbI3 PCE within 3 pp of database MAPbI mean,14.24,PASS,
+3 sanity,FAPbI3 > CsPbBr3,14.83 > 5.82,PASS,
+3 sanity,Sn case < Pb case: MASnI3 < MAPbI3,3.87 < 14.24,PASS,
+3 sanity,Sn case < Pb case: FASnI3 < FAPbI3,4.36 < 14.83,PASS,
+4 candidates,"List A/B rows recomputed 'already in database' (canonical order, tol 0.03)",0 of 38459,PASS,"stored 'already' in A/B: 0; lists={'B': 37299, 'A': 1160}"
+4 candidates,"'novel' wording outside negations (app, CSVs, README)",0,PASS,
+5 tolerance,MAPbI3 hand vs code,0.9115 vs 0.9115,PASS,
+5 tolerance,FAPbI3 hand vs code,0.9866 vs 0.9866,PASS,
+5 tolerance,CsPbI3 hand vs code,0.8510 vs 0.8510,PASS,
+5 tolerance,CsPbBr3 hand vs code,0.8620 vs 0.8620,PASS,
+5 tolerance,CsSnI3 hand vs code,0.8742 vs 0.8742,PASS,
