@@ -11,3 +11,10 @@ The app reads only `model_store/` at runtime (no raw data, no retraining). Repo 
 
 Local check with the same command: `python -m streamlit run dashboard/app.py --server.port 10000 --server.address 0.0.0.0 --server.headless true`, then open http://localhost:10000.
 Training/tests need `pip install -r requirements-dev.txt`.
+
+## Render quick steps
+1. Render dashboard: **New > Blueprint**.
+2. Pick this repository (Render reads `render.yaml`).
+3. Set the `APP_PASSWORD` environment variable when prompted (leave empty for a public app).
+4. Deploy, then add the resulting URL to the README live-demo line.
+Verified from a fresh clone: `pip install -r requirements-dev.txt`, `pytest -q` (14 passed), and the start command on port 10000 returned HTTP 200 on `/_stcore/health` and `/`.
