@@ -1,0 +1,24 @@
+# raw / derived data and run artefacts (never deploy)
+merged_perovskite*.csv
+paper3_stability*.csv
+runs/
+data_derived/
+results_v2_ref/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.streamlit/secrets.toml
+
+# internal / not for the public repo
+[0-9][0-9]_*.md
+artifacts/
+PROGRESS.md
+CLAUDE.md
+CLAUDE_CODE_TASK.md
+*.fdf
+Reply_to_*.pdf
+*.ipynb
+.venv/
+venv/
+raw/

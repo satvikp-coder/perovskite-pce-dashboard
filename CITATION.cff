@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Perovskite PCE Dashboard"
+type: software
+authors:
+  - name: "Perovskite PCE Dashboard contributors"
+license: MIT
+abstract: "ML screening dashboard for perovskite solar cell efficiency and stability."
