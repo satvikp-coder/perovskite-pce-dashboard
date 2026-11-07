@@ -1,0 +1,5 @@
+-r requirements.txt
+shap>=0.45
+pytest>=8.0
+psutil
+playwright
