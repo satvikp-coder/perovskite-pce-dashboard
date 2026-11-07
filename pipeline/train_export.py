@@ -114,7 +114,7 @@ else:
 # --- stability: scenarios (constant multipliers), ablation, proxy model ---
 raw_st = raw[raw.Stability_time_total_exposure.notna()]
 base = p3.raw_TS80.values * p3.A_light.values; rh_row = p3.Relative_Humidity.values
-scen_def = [("S0  27 C, no humidity factor (v1 report)", 27, None), ("S1  50 C, RH 50%  (supervisor suggestion)", 50, 50), ("S2 100 C, RH 50%", 100, 50),
+scen_def = [("S0  27 C, no humidity factor (v1 report)", 27, None), ("S1  50 C, RH 50%  (suggested scenario)", 50, 50), ("S2 100 C, RH 50%", 100, 50),
             ("S3 150 C, RH 50%", 150, 50), ("S4 200 C, RH 50%", 200, 50), ("S5  50 C, RH 100%", 50, 100)]
 Xs_all, STAB_CATS = C.build_features(p3, stability=True); gs = C.group_key(p3, C.BLOCK_STAB)
 trs, tes = train_test_split(np.arange(len(p3)), test_size=0.2, random_state=C.SEED)

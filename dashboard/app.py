@@ -246,7 +246,7 @@ Many test rows have an identical input vector to a training row (same compositio
 - Stability target is test duration, a weak proxy; chemistry window removes very few candidates.
 - Tolerance and octahedral factors use approximate radii and are descriptors only.
 
-**Open supervisor decisions.**
+**Open decisions.**
 1. Lead-free / Ge / Bi: include or defer (data are very sparse for these elements).
 2. How to report temperature and RH (scenario multipliers vs measured columns).
 3. Stability-target redesign (test duration is not time-to-80%).
