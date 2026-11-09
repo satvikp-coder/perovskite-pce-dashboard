@@ -15,7 +15,7 @@ ML screening dashboard that predicts perovskite solar cell power conversion effi
 - Accuracy tab (random vs blocked evaluation), SHAP/partial-dependence explanations, stability scenarios.
 - Runs offline from the precomputed `model_store/`; optional `APP_PASSWORD` gate.
 
-Live demo: _link to be added after the Render deploy_
+Live demo: https://perovskite-pce-dashboard.onrender.com (free hosting; the first load can be slow)
 
 ## Quickstart
 ```bash
